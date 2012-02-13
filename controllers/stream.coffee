@@ -5,7 +5,8 @@ http = require('http')
 url = require('url')
 Converter = require('../lib/converter')
 util = require('util')
-stream = require('stream')
+fs = require('fs')
+ffmpeg = require('basicFFmpeg')
 
 # GET '/stream/:streamUrl'
 exports.index = (req, res) ->
@@ -31,12 +32,34 @@ exports.index = (req, res) ->
     
     http.get(optsFromRedirect(location), (result) ->
       # util.log(util.inspect(result))
-      result.on 'data', (chunk) -> 
-        chunk.pipe(converter.process.stdin)
-        converter.process.stdout.pipe(res)
+      ffmpeg.createProcessor(
+          inputStream: result
+          outputStream: res
+          emitInputAudioCodecEvent: true
+          emitInfoEvent: true
+          emitProgressEvent: true
+          niceness: 10
+          timeout: 10 * 60 * 1000
+          arguments:
+            "-ab": "128k"
+            "-acodec": "libvorbis"
+            "-f": "ogg"
+            # "-aq": "60"
+        ).on("info", (infoLine) ->
+          util.log infoLine
+        ).on("inputAudioCodec", (codec) ->
+          util.debug "input audio codec is: " + codec
+        ).on("success", (retcode, signal) ->
+          util.debug "process finished successfully with retcode: " + retcode + ", signal: " + signal
+        ).on("failure", (retcode, signal) ->
+          util.debug "process failure, retcode: " + retcode + ", signal: " + signal
+        ).on("progress", (bytes) ->
+          util.debug "process event, bytes: " + bytes
+        ).on("timeout", (processor) ->
+          util.debug "timeout event fired, stopping process."
+          processor.terminate()
+        ).execute() 
     )
   )
-
-  res.header('Content-Type', 'audio/ogg')
-  res.send 'yo'
+  res.contentType('application/ogg')
   
