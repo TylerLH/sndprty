@@ -1,0 +1,16 @@
+!!!
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
+    != css('/stylesheets/style')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+    script(src="/javascripts/plugins/spin.min.js")
+    script(src="/javascripts/plugins/jquery.spinner.js")
+    != js('index')
+  body
+    .blocker
+    header
+      h1.masthead Soundparty
+    .container
+      !=body
