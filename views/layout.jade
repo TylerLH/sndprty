@@ -3,15 +3,23 @@ html
   head
     title= title
     link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet", href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/trontastic/jquery-ui.css")
     != css('/stylesheets/style')
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js")
+    script(src="/javascripts/plugins/underscore.min.js")
     script(src="/javascripts/plugins/sm2/soundmanager2-jsmin.js")
+    script(src="/javascripts/plugins/icanhaz.min.js")
     script(src="/javascripts/plugins/spin.min.js")
     script(src="/javascripts/plugins/jquery.spinner.js")
+    script(src="/javascripts/plugins/three.min.js")
     != js('index')
+    != js('search')
   body
     .blocker
     header
-      h1.masthead Soundparty
+      .container
+        h1.masthead 
+          | Soundparty
     .container
       !=body
