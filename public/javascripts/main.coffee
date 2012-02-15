@@ -3,6 +3,7 @@ soundManager.flashVersion = 8 # optional: shiny features (default = 8)
 soundManager.useFlashBlock = false # optionally, enable when you're ready to dive in
 soundManager.useHTML5Audio = true
 soundManager.preferFlash = false
+soundManager.html5PollingInterval = 1000
 
 $ ->
 	Track = window.Track
@@ -12,10 +13,7 @@ $ ->
 	$.getJSON(
 		'/templates.json'
 		(templates) ->
-			console.log('got templates')
 			$(templates).each (key, tmpl) ->
-				console.log(tmpl)
-				console.log(tmpl.name)
 				ich.addTemplate(tmpl.name, tmpl.template)
 	)
 	
@@ -46,6 +44,7 @@ $ ->
 				track_id: $(this).attr('data-id')
 				title: $(this).attr('data-title')
 				artist: $(this).attr('data-artist')
+				duration: $(this).attr('data-duration')
 
 			# create new track instance # play it
 			window.currentTrack = new Track(opts)
@@ -54,3 +53,11 @@ $ ->
 		###### Pause/Play current track ######
 		$('.pause-track').live 'click', (e) ->
 			window.currentTrack.playPause()
+
+		###### Play next track ######
+		$('.next-track').live 'click', (e) ->
+			window.currentTrack.playNextTrack()
+
+		###### Play prev track ######
+		$('.prev-track').live 'click', (e) ->
+			window.currentTrack.playPrevTrack()

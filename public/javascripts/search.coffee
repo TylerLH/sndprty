@@ -21,9 +21,11 @@ window.Search =
 							track_id: track.id
 							title: track.title
 							artist: track.user.username
+							duration: track.duration
 
 						resultItem = ich.result(resultData)
 						$('.results').append(resultItem)
+						$('.more').toggleClass('hide', false)
 
 					# remove spinner
 					$('.blocker').spin(false)
