@@ -39,7 +39,7 @@ exports.templates = (req, res) ->
 		{ name: 'result'
 		template: """
 				<li>
-					<a href="#" data-id="{{ track_id }}" data-title="{{ title }}" data-artist="{{ artist }}" class="playable">
+					<a href="#" data-id="{{ track_id }}" data-title="{{ title }}" data-artist="{{ artist }}" data-duration="{{ duration }}" class="playable">
 							<span class='track-title'>{{ title }}</span> ////// {{ artist }}
 						</a>
 				</li>
@@ -49,10 +49,10 @@ exports.templates = (req, res) ->
 		{
 		name: 'nowplaying'
 		template: """<div class="track-info pull-left">
-						Now playing: {{ title }} by <b>{{ artist }}</b> 
+						Now playing: {{ title }} by <b>{{ artist }}</b> <span class="current_time">0.00</span>/{{ duration }} 
 					</div>
 					<div class="controls pull-right">
-						<i class='icon-pause icon-white pause-track'></i>
+						<i class='icon-pause icon-white pause-track'></i>&nbsp;<i class="icon-step-backward icon-white prev-track"></i>&nbsp;<i class="icon-step-forward icon-white next-track"></i>
 					</div>"""
 		}
 	]
