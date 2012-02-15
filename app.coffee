@@ -40,6 +40,7 @@ app.configure "production", ->
 app.get "/", mainController.index
 app.get "/search.:format?/:query?", mainController.search
 app.get "/stream/:trackId", streamController.index
+app.get "/templates.json", mainController.templates
 
 # Start Server
 app.listen 3000

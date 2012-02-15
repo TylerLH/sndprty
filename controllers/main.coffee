@@ -31,3 +31,30 @@ exports.search = (req, res) ->
 				res.render "index",
 					title: "Soundparty"
 					error: err
+
+# GET '/templates.json'
+# Returns all mustache templates for icanhaz.js
+exports.templates = (req, res) ->
+	templates = [
+		{ name: 'result'
+		template: """
+				<li>
+					<a href="#" data-id="{{ track_id }}" data-title="{{ title }}" data-artist="{{ artist }}" class="playable">
+							<span class='track-title'>{{ title }}</span> ////// {{ artist }}
+						</a>
+				</li>
+			"""
+		}
+		,
+		{
+		name: 'nowplaying'
+		template: """<div class="track-info pull-left">
+						Now playing: {{ title }} by <b>{{ artist }}</b> 
+					</div>
+					<div class="controls pull-right">
+						<i class='icon-pause icon-white pause-track'></i>
+					</div>"""
+		}
+	]
+
+	res.send templates

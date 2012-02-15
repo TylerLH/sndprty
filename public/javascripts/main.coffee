@@ -1,45 +1,56 @@
 soundManager.url = '/javascripts/plugins/sm2/swf/'
-soundManager.flashVersion = 9 # optional: shiny features (default = 8)
+soundManager.flashVersion = 8 # optional: shiny features (default = 8)
 soundManager.useFlashBlock = false # optionally, enable when you're ready to dive in
 soundManager.useHTML5Audio = true
 soundManager.preferFlash = false
 
 $ ->
+	Track = window.Track
+	Search = window.Search
+
+	# Get mustache templates & store for use
+	$.getJSON(
+		'/templates.json'
+		(templates) ->
+			console.log('got templates')
+			$(templates).each (key, tmpl) ->
+				console.log(tmpl)
+				console.log(tmpl.name)
+				ich.addTemplate(tmpl.name, tmpl.template)
+	)
+	
+	# Handle track search
+	# Returns list of tracks and appends them to list
+	# Each list item is playable
 	$('#search').submit (e) ->
 		e.preventDefault()
 
-		# add loading spinner
-		$('.blocker').spin()
+		# define search opts
+		searchOpts = 
+			query: $('#query').val()
 
-		# define search val
-		query = $('#query').val()
+		search = new Search(searchOpts)
+		search.find()
 
-		# get list from server
-		$.getJSON(
-			"/search.json/#{query}"
-			null
-			(tracks) ->
-				# remove all list items that exist
-				$('.results li').remove()
-				$(tracks).each (key, track) ->
-					$('.results').append("""
-						<li><a href="#" data-id="#{track.id}" class="playable"><span class='track-title'>#{track.title}</span> ////// #{track.user.username}</a></li>
-					""")
 
-				# remove spinner
-				$('.blocker').spin(false)
-		)
-		.error (err) ->
-			console.log('error', err)
-
+		# Play selected item onclick
+		# If another track is loaded, current track is killed and replaced
 		$('.playable').live 'click', (e) ->
-			if window.currentTrack
-				window.currentTrack.destruct()
 			e.preventDefault()
-			src = $(this).attr('data-id')
-			window.currentTrack = soundManager.createSound(
-				id: 'current_track'
-				url: "/stream/#{src}"
-				volume: 75
-				autoPlay: true
-			)
+
+			if window.currentTrack
+				window.currentTrack.killTrack() # kill & destruct current track
+
+			# track data (for track info displays)
+			opts =
+				track_id: $(this).attr('data-id')
+				title: $(this).attr('data-title')
+				artist: $(this).attr('data-artist')
+
+			# create new track instance # play it
+			window.currentTrack = new Track(opts)
+			window.currentTrack.playTrack()
+
+		###### Pause/Play current track ######
+		$('.pause-track').live 'click', (e) ->
+			window.currentTrack.playPause()
