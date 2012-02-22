@@ -10,7 +10,6 @@ ffmpeg = require('basicFFmpeg')
 
 # GET '/stream/:streamUrl'
 exports.index = (req, res) ->
-  converter = new Converter
   reqOptions = (trackId) ->
     {
       host: 'api.soundcloud.com',
@@ -34,7 +33,10 @@ exports.index = (req, res) ->
       location = url.parse(result.headers.location)
     
       http.get(optsFromRedirect(location), (result) ->
-        # util.log(util.inspect(result))
+        #util.log(util.inspect(result))
+        result.pipe(res)
+        res.contentType('audio/mp3')
+        ###
         ffmpeg.createProcessor(
             inputStream: result
             outputStream: res
@@ -54,15 +56,24 @@ exports.index = (req, res) ->
             util.debug "input audio codec is: " + codec
           ).on("success", (retcode, signal) ->
             util.debug "process finished successfully with retcode: " + retcode + ", signal: " + signal
+            res.end()
           ).on("failure", (retcode, signal) ->
             util.debug "process failure, retcode: " + retcode + ", signal: " + signal
+            res.end()
           ).on("progress", (bytes) ->
             util.debug "process event, bytes: " + bytes
           ).on("timeout", (processor) ->
             util.debug "timeout event fired, stopping process."
             processor.terminate()
+            res.end()
           ).execute() 
           res.contentType('application/ogg')
+          res.writeHead(200,
+            'Transfer-Encoding': 'chunked'
+            'Content-Type': 'audio/mpeg'
+            'Accept-Ranges': 'bytes' # just to please some players, we do not actually allow seeking
+        )
+        ###
       )
   )
   

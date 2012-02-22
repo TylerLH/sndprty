@@ -10,5 +10,7 @@
     , "stylus": ">= 0.23.0"
     , "nib": ">= 0.3.2"
     , "connect-assets": ">= 2.1.8"
+    , "mongoose": ">= 2.5.6"
+    , "express-resource": ">= 0.2.4"
   }
 }

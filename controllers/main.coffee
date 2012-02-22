@@ -49,10 +49,10 @@ exports.templates = (req, res) ->
 		{
 		name: 'nowplaying'
 		template: """<div class="track-info pull-left">
-						Now playing: {{ title }} by <b>{{ artist }}</b> <span class="current_time">0.00</span>/{{ duration }} 
+						<i class="icon-headphones icon-white"></i> Listening to {{ title }} by <b>{{ artist }}</b> <span class="current_time">0.00</span>/{{ duration }} 
 					</div>
-					<div class="controls pull-right">
-						<i class='icon-pause icon-white pause-track'></i>&nbsp;<i class="icon-step-backward icon-white prev-track"></i>&nbsp;<i class="icon-step-forward icon-white next-track"></i>
+					<div class="controls">
+						<button class='metal radial pause-track'><i class="icon-pause"></i></button>&nbsp;<button class='metal radial prev-track'><i class="icon-step-backward"></i></button>&nbsp;<button class="metal radial next-track"><i class="icon-step-forward"></i></button>
 					</div>"""
 		}
 	]

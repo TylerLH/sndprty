@@ -3,23 +3,85 @@ html
   head
     title= title
     link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
-    link(rel="stylesheet", href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/trontastic/jquery-ui.css")
+    //- link(rel="stylesheet", href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/trontastic/jquery-ui.css")
     != css('/stylesheets/style')
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
-    script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js")
+    //- script(src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js")
+    script(src="/javascripts/plugins/bootstrap.min.js")
     script(src="/javascripts/plugins/underscore.min.js")
     script(src="/javascripts/plugins/sm2/soundmanager2-jsmin.js")
     script(src="/javascripts/plugins/icanhaz.min.js")
     script(src="/javascripts/plugins/spin.min.js")
     script(src="/javascripts/plugins/jquery.spinner.js")
-    script(src="/javascripts/plugins/three.min.js")
-    != js('index')
     != js('search')
   body
-    .blocker
-    header
-      .container
-        h1.masthead 
-          | Soundparty
-    .container
-      !=body
+    .container-fluid(style="padding-left:0; height: 100%;")
+      .row-fluid(style='height: 100%')
+        .span2.sidebar
+          h2.masthead Soundparty
+          .login-buttons
+            a.btn.btn-success(data-toggle="modal", href="#login") 
+              i.icon-music.icon-white
+              |  Sign in to account
+            br
+            br
+            a.btn.btn-info(data-toggle="modal", href="#signup") 
+              i.icon-user.icon-white
+              |  Create new account
+            p(style="padding: .5em; font-size: 80%;")
+              | Make playlists, save radio stations, and listen with your friends. It's free!
+          h4
+            a(data-toggle="collapse", data-target="#my-playlists")
+              i.icon-chevron-right.icon-white 
+            |  My Playlists
+          ul#my-playlists.unstyled.collapse.in
+            li Party Mix
+            li Slow Jams
+            li + Create new playlist
+          h4 
+            a(data-toggle="collapse", data-target="#popular-playlists")
+              i.icon-chevron-right.icon-white 
+            |  Popular Playlists
+          ul#popular-playlists.unstyled.collapse
+            li Playlist 1
+            li Playlist 2
+          h4 
+            a(data-toggle="collapse", data-target="#my-stations")
+              i.icon-chevron-right.icon-white 
+            |  My Radio Stations
+          ul#my-stations.unstyled.collapse
+            li Station 1
+            li Station 2
+          h4 
+            a(data-toggle="collapse", data-target="#popular-stations")
+              i.icon-chevron-right.icon-white 
+            |  Popular Stations
+          ul#popular-stations.unstyled.collapse
+            li Station 1
+            li Station 2
+        .span10.content
+          .blocker
+          !=body
+          .now-playing.hide.clearfix
+
+//- -------------------------------------
+//- Login form modal 
+#login.modal.fade.in.hide
+  .modal-header
+    a.close(data-dismiss="modal") x
+    h2 Sign in to Soundparty
+  .modal-body
+    strong Enter your username & password below
+  .modal-footer
+    a.btn(href="#") Login
+
+//- -------------------------------------
+//- Signup form modal 
+#signup.modal.fade.in.hide
+  .modal-header
+    a.close(data-dismiss="modal") x
+    h2 Create a new account
+  .modal-body
+    strong Enter your username & password below
+  .modal-footer
+    a.btn(href="#") Create account

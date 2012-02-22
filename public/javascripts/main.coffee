@@ -1,9 +1,10 @@
 soundManager.url = '/javascripts/plugins/sm2/swf/'
 soundManager.flashVersion = 8 # optional: shiny features (default = 8)
 soundManager.useFlashBlock = false # optionally, enable when you're ready to dive in
-soundManager.useHTML5Audio = true
-soundManager.preferFlash = false
+soundManager.useHTML5Audio = false
+soundManager.preferFlash = true
 soundManager.html5PollingInterval = 1000
+soundManager.flashPollingInterval = 1000
 
 $ ->
 	Track = window.Track
@@ -26,9 +27,10 @@ $ ->
 		# define search opts
 		searchOpts = 
 			query: $('#query').val()
+			offset: 0
 
-		search = new Search(searchOpts)
-		search.find()
+		window.currentSearch = new Search(searchOpts)
+		window.currentSearch.find()
 
 
 		# Play selected item onclick
@@ -38,6 +40,7 @@ $ ->
 
 			if window.currentTrack
 				window.currentTrack.killTrack() # kill & destruct current track
+				window.currentTrack = null
 
 			# track data (for track info displays)
 			opts =
@@ -61,3 +64,8 @@ $ ->
 		###### Play prev track ######
 		$('.prev-track').live 'click', (e) ->
 			window.currentTrack.playPrevTrack()
+
+		###### We've reached the bottom, captain ######
+
+		$(window).scroll ->
+  		window.currentSearch.loadMore()  if $(window).scrollTop() is $(document).height() - $(window).height()

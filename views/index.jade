@@ -1,10 +1,9 @@
 != js('track')
 != js('main')
-.now-playing.hide.clearfix
 .main
 	form#search(action="/search", method="get")
-		input#query.span10(type="text", name="query", placeholder="Enter an artist or genre you want to hear")
-		input#find-music.btn.btn-primary.large(type="submit", value="Find Music")
+		input#query.span10(type="text", name="query", placeholder="Enter an artist, song, or genre you want to hear")
+		input#find-music.btn.btn-primary.large(type="submit", value="Find Music", data-loading-text="Looking..")
 	ul.results.unstyled
 	.more.hide
 		a(href="#") 
