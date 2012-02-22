@@ -2,6 +2,8 @@
 express = require("express")
 stylus = require("stylus")
 nib = require("nib")
+mongoose = require('mongoose')
+Resource = require('express-resource')
 
 # App Controllers
 mainController = require('./controllers/main')
@@ -42,6 +44,9 @@ app.get "/search.:format?/:query?", mainController.search
 app.get "/stream/:trackId", streamController.index
 app.get "/templates.json", mainController.templates
 
+app.resource('users', require('./controllers/users'))
+
 # Start Server
+mongoose.connect('mongodb://localhost:27017/sndprty_dev');
 app.listen 3000
 console.log "Express server listening on port %d in %s mode", app.address().port, app.settings.env

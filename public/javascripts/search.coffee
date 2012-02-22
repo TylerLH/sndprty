@@ -8,10 +8,10 @@ window.Search =
 		find: =>
 			# add loading spinner
 			$('.blocker').spin()
-			
+			$('#find-music').button('loading')
 			# get list from server
 			$.getJSON(
-				"/search.json/#{@query}"
+				"/search.json/#{@query}/#{@offset}"
 				null
 				(tracks) ->
 					# remove all list items that exist
@@ -29,6 +29,10 @@ window.Search =
 
 					# remove spinner
 					$('.blocker').spin(false)
+					$('#find-music').button('reset')
 			)
 			.error (err) ->
 				console.log('error', err)
+
+		loadMore: (offset) =>
+			console.log('need to load more tracks')
