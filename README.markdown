@@ -7,7 +7,7 @@ To run the app
 --------------------
 
 Clone the repo, cd to the folder, and install dependencies
-'''bash
+'''shell
 git clone git://github.com/TylerLH/sndprty.git
 cd ./sndprty
 npm install -d
