@@ -7,11 +7,11 @@ To run the app
 --------------------
 
 Clone the repo, cd to the folder, and install dependencies
-'''shell
-git clone git://github.com/TylerLH/sndprty.git
-cd ./sndprty
-npm install -d
-coffee app.coffee
+'''
+	git clone git://github.com/TylerLH/sndprty.git
+	cd ./sndprty
+	npm install -d
+	coffee app.coffee
 '''
 
 You'll need to be running Node.js v0.6.10 to install all dependencies. Database connection isn't necessary atm.
