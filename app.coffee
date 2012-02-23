@@ -40,7 +40,7 @@ app.configure "production", ->
 
 # App Routes
 app.get "/", mainController.index
-app.get "/search.:format?/:query?", mainController.search
+app.get "/search.:format?/:query?/:offset?", mainController.search
 app.get "/stream/:trackId", streamController.index
 app.get "/templates.json", mainController.templates
 
