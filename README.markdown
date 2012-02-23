@@ -14,3 +14,12 @@ Clone the repo, cd to the folder, and install dependencies
 4. coffee app.coffee
 
 You'll need to be running Node.js v0.6.10 to install all dependencies. Database connection isn't necessary atm.
+
+Todos
+---------------------
+
+- finish infinite scroll track loading
+- finish user authentication
+- implement playlist creation, editing, sharing (mongodb store)
+- implement radio functionality (play track from searched artist, then autoplay relevant music afterward)
+- websockets integration for realtime listening w/ friends + chat functionality (will use redis for chat logs?)
