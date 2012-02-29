@@ -11,5 +11,6 @@ pids
 logs
 results
 
+builtAssets
 node_modules
 npm-debug.log
