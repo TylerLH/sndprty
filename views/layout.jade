@@ -1,7 +1,7 @@
 !!!
 html
   head
-    title= title
+    title Soundparty
     link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
     //- link(rel="stylesheet", href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/trontastic/jquery-ui.css")
     != css('/stylesheets/style')
@@ -72,8 +72,13 @@ html
     h2 Sign in to Soundparty
   .modal-body
     strong Enter your username & password below
+    form#login.form-stacked
+    .input
+      input#login_username(type="text", placeholder="Your username")
+    .input
+      input#login_password(type="password", placeholder="Your password")
   .modal-footer
-    a.btn(href="#") Login
+    a#do-login.btn.btn-primary.btn-large(href="#") Login
 
 //- -------------------------------------
 //- Signup form modal 
@@ -82,6 +87,19 @@ html
     a.close(data-dismiss="modal") x
     h2 Create a new account
   .modal-body
-    strong Enter your username & password below
+    strong Enter a username, email & password below to get started using Soundparty.
+    form#signup_form.form-stacked
+      .input
+        //label Username
+        input.span4#signup_username(type="text", placeholder="Enter a username")
+      .input
+        //label Email
+        input.span4#signup_email(type="email", placeholder="Enter your email address")
+      .input
+        //label Password
+        input.span4#signup_password(type="password", placeholder="Enter your password")
+      .input
+        //label Confirm Password
+        input.span4#signup_confirm_password(type="password", placeholder="Confirm your password")
   .modal-footer
-    a.btn(href="#") Create account
+    a.btn.btn-primary.btn-large#create-account(href="#") Create account

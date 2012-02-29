@@ -13,12 +13,11 @@ Clone the repo, cd to the folder, and install dependencies
 3. npm install -d
 4. coffee app.coffee
 
-You'll need to be running Node.js v0.6.10 to install all dependencies. Database connection isn't necessary atm.
+You'll need to be running Node.js v0.6.10, express framework, and coffeescript to run properly.
 
 Todos
 ---------------------
 
-- finish infinite scroll track loading
 - finish user authentication
 - implement playlist creation, editing, sharing (mongodb store)
 - implement radio functionality (play track from searched artist, then autoplay relevant music afterward)

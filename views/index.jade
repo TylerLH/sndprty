@@ -1,6 +1,8 @@
 != js('track')
 != js('main')
 .main
+	if user_signed_in
+		p.user_info= current_user.username
 	form#search(action="/search", method="get")
 		input#query.span10(type="text", name="query", placeholder="Enter an artist, song, or genre you want to hear")
 		input#find-music.btn.btn-primary.large(type="submit", value="Find Music", data-loading-text="Looking..")

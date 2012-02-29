@@ -17,6 +17,44 @@ $ ->
 			$(templates).each (key, tmpl) ->
 				ich.addTemplate(tmpl.name, tmpl.template)
 	)
+
+	###
+		Handle user sign up modal
+	###
+	$('#create-account').click (e) ->
+		e.preventDefault()
+		console.log('click')
+		$.ajax(
+			'/users'
+			dataType: 'json'
+			type: 'post'
+			data:
+				username: $('#signup_username').val()
+				email: $('#signup_email').val()
+				password: $('#signup_password').val()
+				password_confirm: $('#signup_confirm_password').val()
+		)
+		.success (user) ->
+			alert('success!')
+			console.log(user)
+
+	###
+		Handle user sign in modal
+	###
+	$('#do-login').click (e) ->
+		e.preventDefault()
+		console.log('click')
+		$.ajax(
+			'/login'
+			dataType: 'json'
+			type: 'post'
+			data:
+				username: $('#login_username').val()
+				password: $('#login_password').val()
+		)
+		.success (user) ->
+			alert('success!')
+			console.log(user)
 	
 	# Handle track search
 	# Returns list of tracks and appends them to list
