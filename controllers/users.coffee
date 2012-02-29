@@ -11,7 +11,7 @@ exports.index = (req, res) ->
 	res.send('user index')
 
 exports.new = (req, res) ->
-	res.send('new user')
+	res.render('users/signup')
 
 exports.create = (req, res) ->
 	opts =
@@ -22,9 +22,11 @@ exports.create = (req, res) ->
 	user = new User(opts)
 	user.save (err) ->
 		unless err
-			res.send(200)
+			req.session.user_info = user
+			app.helpers.current_user = user
+			res.send({status: "success", message: "User created successfully", user: user})
 		else
-			res.send({error: err, reason: "user input error"})
+			res.send({status: "error", message: err})
 
 exports.show = (req, res) ->
 	res.send('show user' + req.params.user)
@@ -36,4 +38,6 @@ exports.update = (req, res) ->
 	res.send('update user' + req.params.user)
 
 exports.destroy = (req, res) ->
-	res.send('destroy user ' + req.params.user)
+	req.session.destroy()
+	req.flash('info', 'You signed out successfully')
+	res.redirect('/')

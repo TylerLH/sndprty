@@ -1,0 +1,144 @@
+@font-face { font-family: 'IconicFill'; src: url('/stylesheets/iconic_fill/iconic_fill.eot'); src: local('IconicFill'), url('/stylesheets/iconic_fill/iconic_fill.svg#iconic') format('svg'), url('/stylesheets/iconic_fill/iconic_fill.otf') format('opentype'); }.iconic { display:inline-block; font-family: 'IconicFill'; }.hash:before {content:'\23';}.question_mark:before {content:'\3f';}.at:before {content:'\40';}.pilcrow:before {content:'\b6';}.info:before {content:'\2139';}.arrow_left:before {content:'\2190';}.arrow_up:before {content:'\2191';}.arrow_right:before {content:'\2192';}.arrow_down:before {content:'\2193';}.home:before {content:'\2302';}.sun_fill:before {content:'\2600';}.cloud:before {content:'\2601';}.umbrella:before {content:'\2602';}.star:before {content:'\2605';}.moon_fill:before {content:'\263e';}.heart_fill:before {content:'\2764';}.cog:before {content:'\2699';}.bolt:before {content:'\26a1';}.key_fill:before {content:'\26bf';}.rain:before {content:'\26c6';}.denied:before {content:'\26d4';}.mail:before {content:'\2709';}.pen:before {content:'\270e';}.check:before {content:'\2713';}.check_alt:before {content:'\2714';}.x:before {content:'\2717';}.x_alt:before {content:'\2718';}.left_quote:before {content:'\275d';}.right_quote:before {content:'\275e';}.plus:before {content:'\2795';}.minus:before {content:'\2796';}.curved_arrow:before {content:'\2935';}.document_alt_fill:before {content:'\e000';}.calendar:before {content:'\e001';}.map_pin_alt:before {content:'\e002';}.comment_alt1_fill:before {content:'\e003';}.comment_alt2_fill:before {content:'\e004';}.pen_alt_fill:before {content:'\e005';}.pen_alt2:before {content:'\e006';}.chat_alt_fill:before {content:'\e007';}.plus_alt:before {content:'\e008';}.minus_alt:before {content:'\e009';}.bars_alt:before {content:'\e00a';}.book_alt:before {content:'\e00b';}.aperture_alt:before {content:'\e00c';}.beaker_alt:before {content:'\e010';}.left_quote_alt:before {content:'\e011';}.right_quote_alt:before {content:'\e012';}.arrow_left_alt1:before {content:'\e013';}.arrow_up_alt1:before {content:'\e014';}.arrow_right_alt1:before {content:'\e015';}.arrow_down_alt1:before {content:'\e016';}.arrow_left_alt2:before {content:'\e017';}.arrow_up_alt2:before {content:'\e018';}.arrow_right_alt2:before {content:'\e019';}.arrow_down_alt2:before {content:'\e01a';}.brush:before {content:'\e01b';}.brush_alt:before {content:'\e01c';}.eyedropper:before {content:'\e01e';}.layers:before {content:'\e01f';}.layers_alt:before {content:'\e020';}.compass:before {content:'\e021';}.award_fill:before {content:'\e022';}.beaker:before {content:'\e023';}.steering_wheel:before {content:'\e024';}.eye:before {content:'\e025';}.aperture:before {content:'\e026';}.image:before {content:'\e027';}.chart:before {content:'\e028';}.chart_alt:before {content:'\e029';}.target:before {content:'\e02a';}.tag_fill:before {content:'\e02b';}.rss:before {content:'\e02c';}.rss_alt:before {content:'\e02d';}.share:before {content:'\e02e';}.undo:before {content:'\e02f';}.reload:before {content:'\e030';}.reload_alt:before {content:'\e031';}.loop_alt1:before {content:'\e032';}.loop_alt2:before {content:'\e033';}.loop_alt3:before {content:'\e034';}.loop_alt4:before {content:'\e035';}.spin:before {content:'\e036';}.spin_alt:before {content:'\e037';}.move_horizontal:before {content:'\e038';}.move_horizontal_alt1:before {content:'\e039';}.move_horizontal_alt2:before {content:'\e03a';}.move_vertical:before {content:'\e03b';}.move_vertical_alt1:before {content:'\e03c';}.move_vertical_alt2:before {content:'\e03d';}.move:before {content:'\e03e';}.move_alt1:before {content:'\e03f';}.move_alt2:before {content:'\e040';}.transfer:before {content:'\e041';}.download:before {content:'\e042';}.upload:before {content:'\e043';}.cloud_download:before {content:'\e044';}.cloud_upload:before {content:'\e045';}.fork:before {content:'\e046';}.play:before {content:'\e047';}.play_alt:before {content:'\e048';}.pause:before {content:'\e049';}.stop:before {content:'\e04a';}.eject:before {content:'\e04b';}.first:before {content:'\e04c';}.last:before {content:'\e04d';}.fullscreen:before {content:'\e04e';}.fullscreen_alt:before {content:'\e04f';}.fullscreen_exit:before {content:'\e050';}.fullscreen_exit_alt:before {content:'\e051';}.equalizer:before {content:'\e052';}.article:before {content:'\e053';}.read_more:before {content:'\e054';}.list:before {content:'\e055';}.list_nested:before {content:'\e056';}.cursor:before {content:'\e057';}.dial:before {content:'\e058';}.new_window:before {content:'\e059';}.trash_fill:before {content:'\e05a';}.battery_half:before {content:'\e05b';}.battery_empty:before {content:'\e05c';}.battery_charging:before {content:'\e05d';}.chat:before {content:'\e05e';}.mic:before {content:'\e05f';}.movie:before {content:'\e060';}.headphones:before {content:'\e061';}.user:before {content:'\e062';}.lightbulb:before {content:'\e063';}.cd:before {content:'\e064';}.folder_fill:before {content:'\e065';}.document_fill:before {content:'\e066';}.pin:before {content:'\e067';}.map_pin_fill:before {content:'\e068';}.book:before {content:'\e069';}.book_alt2:before {content:'\e06a';}.box:before {content:'\e06b';}.calendar_alt_fill:before {content:'\e06c';}.comment_fill:before {content:'\e06d';}.iphone:before {content:'\e06e';}.bars:before {content:'\e06f';}.camera:before {content:'\e070';}.volume_mute:before {content:'\e071';}.volume:before {content:'\e072';}.battery_full:before {content:'\e073';}.magnifying_glass:before {content:'\e074';}.lock_fill:before {content:'\e075';}.unlock_fill:before {content:'\e076';}.link:before {content:'\e077';}.wrench:before {content:'\e078';}.clock:before {content:'\e079';}
+/* Brushed Metal by @simurai */
+
+/* globals */
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold);
+@import url(prefixes.css);
+
+/* Metal ------------------------- */
+
+.metal {
+position: relative;
+/* margin: 40px auto; */
+
+font: bold 6em/2em;
+font-family: "IconicFill";
+text-align: center;
+color: hsla(0,0%,20%,1);
+text-shadow: hsla(0,0%,40%,.5) 0 -1px 0, hsla(0,0%,100%,.6) 0 2px 1px;
+
+background-color: hsl(0,0%,90%);
+-webkit-box-shadow: inset hsla(0,0%,15%,  1) 0  0px 0px 4px,  /* border */
+          inset hsla(0,0%,15%, .8) 0 -1px 5px 4px,  /* soft SD */
+          inset hsla(0,0%,0%, .25) 0 -1px 0px 7px,  /* bottom SD */
+          inset hsla(0,0%,100%,.7) 0  2px 1px 7px,  /* top HL */
+          
+              hsla(100%,100%, 0%,.15) 0 -5px 6px 4px,  /* outer SD */
+              hsla(0,0%,100%,.5) 0  5px 6px 4px;  /* outer HL */  
+
+-webkit-transition: color .2s;
+}
+
+
+
+/* Radial ------------------------- */
+
+.radial.metal {
+width: 60px;
+height: 60px;
+line-height: 60px;
+border-radius: 80px;
+background-image: -webkit-radial-gradient(  50%   0%,  8% 50%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+          -webkit-radial-gradient(  50% 100%, 12% 50%, hsla(0,0%,100%,.6) 0%, hsla(0,0%,100%,0) 100%),
+          -webkit-radial-gradient(   0%  50%, 50%  7%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+          -webkit-radial-gradient( 100%  50%, 50%  5%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
+          
+          -webkit-repeating-radial-gradient(  50% 50%, 100% 100%, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   3%, hsla(0,0%,  0%,.1) 3.5%),
+          -webkit-repeating-radial-gradient(  50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%,.1) 7.5%),
+          -webkit-repeating-radial-gradient(  50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.2) 2.2%),
+          
+          -webkit-radial-gradient(  50% 50%, 200% 50%, hsla(0,0%,90%,1) 5%, hsla(0,0%,85%,1) 30%, hsla(0,0%,60%,1) 100%);         
+}
+
+
+.metal.radial:before, .metal.radial:after {
+content: "";
+top: 0;
+left: 0;
+position: absolute;
+width: inherit;
+height: inherit;
+border-radius: inherit;
+
+/* fake conical gradients */
+background-image:   -webkit-radial-gradient(  50%   0%, 10% 50%, hsla(0,0%,0%,.1) 0%, hsla(0,0%,0%,0) 100%),
+          -webkit-radial-gradient(  50% 100%, 10% 50%, hsla(0,0%,0%,.1) 0%, hsla(0,0%,0%,0) 100%),
+          -webkit-radial-gradient(   0%  50%, 50% 10%, hsla(0,0%,0%,.1) 0%, hsla(0,0%,0%,0) 100%),
+          -webkit-radial-gradient( 100%  50%, 50% 06%, hsla(0,0%,0%,.1) 0%, hsla(0,0%,0%,0) 100%);
+}
+.metal.radial:before {  -webkit-transform: rotate( 65deg); }
+.metal.radial:after { -webkit-transform: rotate(-65deg); }
+
+
+
+
+/* Linear ------------------------- */
+
+.metal.linear {
+width: 80px;
+font-size: 4em;
+height: 60px;
+border-radius: .5em;
+background-image:   -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%),          
+          -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%),          
+          -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%),
+          
+          -webkit-linear-gradient(-90deg, hsl(0,0%,78%)  0%, 
+                          hsl(0,0%,90%) 47%, 
+                          hsl(0,0%,78%) 53%,
+                          hsl(0,0%,70%)100%);           
+}
+
+
+/* Oval ------------------------- */
+
+.metal.linear.oval {
+margin-top: 100px;
+width: 70px;
+height: 60px;
+line-height: 60px !important;
+border-radius: 50%;
+font: italic bold 3em/50px Georgia, "Times New Roman", Times, serif;
+}
+
+
+
+
+/* active ------------------------- */
+
+.metal:active {
+color: hsl(210, 100%, 40%);
+text-shadow: hsla(210,100%,20%,.3) 0 -1px 0, hsl(210,100%,85%) 0 2px 1px, hsla(200,100%,80%,1) 0 0 5px, hsla(210,100%,50%,.6) 0 0 20px;
+-webkit-box-shadow: 
+        inset hsla(210,100%,30%,  1) 0  0px 0px 4px,  /* border */
+        inset hsla(210,100%,15%, .4) 0 -1px 5px 4px,  /* soft SD */
+        inset hsla(210,100%,20%,.25) 0 -1px 0px 7px,  /* bottom SD */
+        inset hsla(210,100%,100%,.7) 0  2px 1px 7px,  /* top HL */
+            
+            hsla(100%,100%, 0%,.15) 0 -5px 6px 4px,  /* outer SD */
+              hsla(0,0%,100%,.5) 0  5px 6px 4px,  /* outer HL */  
+            hsla(210,80%,95%,   1) 0  5px 6px 4px;  /* outer HL */
+}
+body,html{height:100%}
+body{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(1, #232323));background:-webkit-linear-gradient(top, #222 0%, #232323 100%);background:-moz-linear-gradient(top, #222 0%, #232323 100%);background:linear-gradient(top, #222 0%, #232323 100%);background-attachment:fixed;font-family:'Helvetica Neue',Arial,sans-serif;color:#ccc}
+.blocker{position:fixed;top:50%;left:50%}
+.masthead{color:#8cc74a;font-size:260%;line-height:100%;text-shadow:1px 4px 6px #191919,0 0 0 #000,1px 4px 6px #191919;margin:.5em 0 1em 0;letter-spacing:-3px;text-align:center}
+.now-playing{background:rgba(0,0,0,0.80);color:#f5f5f5;font-size:130%;line-height:130%;position:fixed;bottom:0;left:0;padding:1em 2em 1em 1em;margin:0 auto;height:50px;width:100%;}
+.now-playing .track-info{padding-top:20px}
+.now-playing .controls{position:absolute;bottom:10px;right:70px}
+.sidebar{background:#191919;background-image:url("/images/noise_drk.png");-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;height:100%;border-right:1px solid #161616;position:fixed;-webkit-box-shadow:inset 0 1px 9px #000;-moz-box-shadow:inset 0 1px 9px #000;box-shadow:inset 0 1px 9px #000;}
+.sidebar .login-buttons{text-align:center;margin-bottom:2em}
+.sidebar h3,.sidebar h4,.sidebar h5{color:#ccc}
+.sidebar h4{background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(1, #111));background:-webkit-linear-gradient(top, #222 0%, #111 100%);background:-moz-linear-gradient(top, #222 0%, #111 100%);background:linear-gradient(top, #222 0%, #111 100%);border-top:1px solid rgba(0,0,0,0.20);border-bottom:1px solid rgba(0,0,0,0.60);padding:.5em;text-shadow:0 1px 0 rgba(0,0,0,0.30),0 0 30px rgba(255,255,255,0.20)}
+.sidebar ul{margin:.5em 0 1em 0}
+.sidebar ul li{padding:.4em .7em;text-shadow:1px 1px 1px #000;cursor:pointer;}
+.sidebar ul li:hover{background:#030303}
+.content{margin-left:200px !important;padding-left:.5em;padding-bottom:.5em;position:relative}
+.main #search{margin-top:1em;}
+.main #search #query{background:#191919;border:1px solid rgba(50,50,50,0.30);-webkit-box-shadow:1px 1px 1px rgba(255,255,255,0.13);-moz-box-shadow:1px 1px 1px rgba(255,255,255,0.13);box-shadow:1px 1px 1px rgba(255,255,255,0.13);font-size:200%;height:150%;line-height:150%}
+.main #search #find-music{font-size:160%;height:150%;line-height:180%;margin-left:.3em}
+.main .results li{background:#111;font-size:160%;line-height:150%;margin-bottom:.5em;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;padding:.5em;}
+.main .results li a,.main .results li a:visited{color:#8cc84b}
+.main .more{background:#111;font-size:160%;line-height:150%;padding:.5em;text-align:center;}
+.main .more a,.main .more a:visited{color:#8cc84b}

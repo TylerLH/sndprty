@@ -16,14 +16,15 @@ exports.search = (req, res) ->
 		q: req.params.query
 		order: 'hotness'
 		limit: 20
+		offset: req.param('offset')
 	).get (err, result) ->
 		if !err
 			if req.params.format == 'json'
 				res.send result
 			else
-			res.render "search",
-				tracks: result
-				title: "Search"
+				res.render "search",
+					tracks: result
+					title: "Search"
 		else
 			if req.params.format == 'json'
 				res.send err
